@@ -37,11 +37,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .button__top {
   position: absolute;
   top: 4rem;
   right: 25%;
 }
+
 button {
   background-color: #FBDA1B;
   border: none;
@@ -51,7 +53,8 @@ button {
   font-weight: 700;
   height: 60px;
   margin: auto 0;
-  min-width: 300px;
+  min-width: 200px;
+  padding: .5rem 3rem;
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -69,7 +72,12 @@ button:hover {
   padding: 3rem;
 }
 
-.greeting__container img,
+.greeting__container img {
+  width: 100%;
+  max-width: 338px;
+  margin-bottom: 2rem;
+}
+
 .greeting__container h2,
 .greeting__container p
  {
@@ -90,6 +98,7 @@ button:hover {
   -webkit-clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
 }
+
 .description__container h3 {
   max-width: 800px;
   margin: 0 auto;
@@ -141,6 +150,7 @@ footer {
 }
 
 .footer__contents a {
+  display: inline-block;
   margin-right: 1rem;
 }
 
@@ -149,14 +159,13 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+a:hover {   text-decoration: underline; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
 
   .button__top {
-    right: 10%;
+    right: 50%;
+    left: 25%;
   }
   .greeting__container img {
     max-width: 100%;
@@ -189,4 +198,12 @@ a:hover {
   }
 
   footer button { margin-top: 2rem; }
+
+  .contact__container {
+    text-align: center;
+  }
+
+  .contact__container a {
+    margin-right: 0;
+  }
 }
