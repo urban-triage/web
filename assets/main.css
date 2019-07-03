@@ -34,13 +34,13 @@ body {
 .header__container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .button__top {
   position: absolute;
   top: 4rem;
-  right: 20%;
+  right: 25%;
 }
 button {
   background-color: #FBDA1B;
@@ -57,13 +57,14 @@ button {
 }
 
 button:hover {
-  background-color: #E4941D;
+  color: #fff;
+  background-color: #48914F;
   box-shadow: .3rem .3rem .3rem #000;
 }
 
 .greeting__container {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 30%;
+  width: 25%;
   height: 100%;
   padding: 3rem;
 }
@@ -71,7 +72,10 @@ button:hover {
 .greeting__container img,
 .greeting__container h2,
 .greeting__container p
- { margin-bottom: 2rem; }
+ {
+   margin-bottom: 2rem;
+   max-width: 338px;
+ }
 
 .greeting__container a {
   display: block;
@@ -81,7 +85,10 @@ button:hover {
 
 .description__container {
   background: #D4442C;
-  padding: 6rem;
+  margin-top: -58px;
+  padding: 8rem;
+  -webkit-clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0% 15%, 100% 0, 100% 85%, 0 100%);
 }
 .description__container h3 {
   max-width: 800px;
@@ -90,11 +97,14 @@ button:hover {
 
 .training__container {
   background: #1D4B95;
-  padding: 6rem 3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 6rem 3rem;
+  -webkit-clip-path: polygon(0% 10%, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0% 10%, 100% 0, 100% 85%, 0 100%);
 }
 
 .training__container h3 { margin-bottom: 1rem;}
@@ -102,8 +112,12 @@ button:hover {
 .training__container ul {
   flex: 1;
   max-width: 33%;
-  align-self: flex-end;
+  align-self: center;
   list-style-type: circle;
+}
+
+.training__container li {
+  margin-bottom: .5rem;
 }
 
 footer {
@@ -112,7 +126,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 3rem;
+  padding: 5rem;
+  -webkit-clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0 100%);
 }
 
 .footer__contents {
@@ -124,7 +140,9 @@ footer {
   width: 100%;
 }
 
-.footer__contents a { margin-right: 2rem;}
+.footer__contents a {
+  margin-right: 1rem;
+}
 
 a {
   color: #fff;
@@ -133,4 +151,42 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .button__top {
+    right: 10%;
+  }
+  .greeting__container img {
+    max-width: 100%;
+  }
+
+  .greeting__container {
+    width: 100%;
+    padding-top: 8rem;
+  }
+
+  .button__top {
+    top: 2rem;
+  }
+
+  .description__container {
+    margin-top: -100px;
+    padding: 6rem 2rem;
+  }
+
+  .training__container {
+    padding: 6rem 2rem;
+    justify-content: flex-start;
+    -webkit-clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0% 10%, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .training__container ul {
+    flex: unset;
+    max-width: 100%;
+  }
+
+  footer button { margin-top: 2rem; }
 }
