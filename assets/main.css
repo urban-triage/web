@@ -38,28 +38,41 @@ body {
   justify-content: space-between;
 }
 
-.button__top {
+a.button__top {
   position: absolute;
   top: 4rem;
-  right: 25%;
 }
 
-button {
+a.button {
+  color: black;
+  text-align: center;
+  line-height: 60px;
+  right: 25%;
   background-color: #FBDA1B;
   border: none;
   border-radius: 60px;
   box-shadow: .5rem .5rem .5rem #000;
+  display: block;
   font-size: 1.2rem;
   font-weight: 700;
   height: 60px;
   margin: auto 0;
   min-width: 200px;
-  padding: .5rem 3rem;
+  padding: .25rem 2rem;
   text-transform: uppercase;
   transition: 0.3s;
 }
 
-button:hover {
+a.button:hover {
+  text-decoration: none;
+}
+
+a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+a:hover {
   color: #fff;
   background-color: #48914F;
   box-shadow: .3rem .3rem .3rem #000;
