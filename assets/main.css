@@ -86,6 +86,7 @@ a:hover {
 }
 
 .greeting__container img {
+  background-color: #ffffff;
   width: 100%;
   max-width: 338px;
   margin-bottom: 2rem;
