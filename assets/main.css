@@ -130,7 +130,11 @@ a:hover {
   clip-path: polygon(0% 10%, 100% 0, 100% 85%, 0 100%);
 }
 
-.training__container h3 { margin-bottom: 1rem;}
+.training__container h3 {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding-left: 7%;
+}
 
 .training__container ul {
   flex: 1;
